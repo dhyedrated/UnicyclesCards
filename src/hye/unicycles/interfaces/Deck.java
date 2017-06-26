@@ -1,4 +1,4 @@
-package hye.unicycles;
+package hye.unicycles.interfaces;
 
 public interface Deck
 {

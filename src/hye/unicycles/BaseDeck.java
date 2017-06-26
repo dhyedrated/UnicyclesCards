@@ -52,7 +52,7 @@ public class BaseDeck implements Deck {
     }
     
     // -- protected
-    protected void initializeDeck(Card[] inContents) {
+    final protected void initializeDeck(Card[] inContents) {
         _dckObject = inContents;
         _cursor = -1;
     }

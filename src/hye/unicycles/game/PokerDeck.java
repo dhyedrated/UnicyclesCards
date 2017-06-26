@@ -1,4 +1,7 @@
-package hye.unicycles;
+package hye.unicycles.game;
+
+import hye.unicycles.BaseDeck;
+import hye.unicycles.Card;
 
 
 public class PokerDeck extends BaseDeck {

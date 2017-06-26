@@ -24,7 +24,9 @@ public class BaseDeck implements Deck {
         long seed = System.currentTimeMillis();
         Random r = new Random(seed);
         int dckSize = _dckObject.length;
-        for (int lcv = 0; lcv<dckSize; ++lcv) {
+        int oldCursor = _cursor;
+        for (int lcv = _cursor+1; lcv<dckSize; ++lcv) {
+            
             Card c = _dckObject[lcv];
             int toSwap = lcv + r.nextInt(dckSize-lcv); 
             //possible to swap with myself, but can't swap with a card before.
@@ -32,7 +34,7 @@ public class BaseDeck implements Deck {
             _dckObject[toSwap] = c;
             _dckObject[lcv] = temp;
         }
-        _cursor = -1;
+        _cursor = oldCursor;
     }
     
     public int getRemainingCards() {
@@ -42,7 +44,7 @@ public class BaseDeck implements Deck {
     @Override
     public Card dealOneCard() {
         ++_cursor;
-        if(_cursor > _dckObject.length){
+        if(_cursor >= _dckObject.length){
            return null;
         }
 

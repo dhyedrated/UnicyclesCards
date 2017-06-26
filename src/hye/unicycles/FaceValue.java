@@ -1,5 +1,7 @@
+/*package hye.unicycles;
+
 enum FaceValue {
-	Ace =1.
+	Ace =1,
 	Deuce =2,
 	Three,
 	Four,
@@ -9,9 +11,8 @@ enum FaceValue {
 	Eight,
 	Nine,
 	Ten,
-	Jack
+	Jack,
 	Queen,
 	King
-
-
 }
+*/

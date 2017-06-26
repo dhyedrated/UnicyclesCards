@@ -1,10 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package hye.unicycles;
 
+import hye.unicycles.interfaces.Card;
+import hye.unicycles.interfaces.Deck;
 import java.util.Random;
 
 /**
@@ -41,7 +38,7 @@ public class BaseDeck implements Deck {
         return _dckObject.length - _cursor;
     }
 	
-    @Override
+    @Override    
     public Card dealOneCard() {
         ++_cursor;
         if(_cursor >= _dckObject.length){
